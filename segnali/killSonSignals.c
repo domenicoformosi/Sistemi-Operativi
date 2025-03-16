@@ -19,7 +19,7 @@ int main(){
     if (pid==0){
         printf("Sono il figlio %d \n",pid);
         signal(SIGINT, SIG_IGN);
-        execl("/bin/ls","sleep","30",(char *) 0);
+        execl("/bin/sleep","sleep","30",(char *) 0);
         exit(0);
     }else{
         pid = wait(&status);

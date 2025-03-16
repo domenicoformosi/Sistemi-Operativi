@@ -38,7 +38,7 @@ int getRandIndex(){
     return rand()%4;
 }
 
-int main(char argc, char *argv[]){
+int main(int argc, char *argv[]){
 int num=0,status,numBiglie[NUMCOLOR],pid;
 srand(time(NULL));
 char colori_possibili[NUMCOLOR]={'r','g','b','y'};
