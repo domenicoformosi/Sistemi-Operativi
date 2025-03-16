@@ -104,7 +104,7 @@ for (int i=0;i<NUMCOLOR; i++){
     printf("%s\n",argv[1]);    
     char str[2] = {colori_possibili[pos],'\0'};
     printf("%s\n",str);
-    execl("/bin/grep", "grep",str,argv[1]);
+    execl("/bin/grep", "grep",str,(char *) 0);
     exit(0);
    }else if (pid > 0){
     pid = wait(&status);
