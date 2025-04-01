@@ -15,10 +15,20 @@
     il numero di messaggi e la lora dimensione sono assunti prefissati
 */
 
+/*
+    COMMENTO FINALE (guarda prima il codice)
+    sembra abbastanza chiaro che tutto ciò sia una cagata, cioè nel senso i processi comunicano
+    pero non è il top sta roba, ci sono diverse problematiche, tra le principali l'energia richiesta
+    al programmatore per sincronizzare (mo sono 2 processi ma potrebbero esser n), vabbe niente questo era
+    ciao :)
+*/
+
 #include <signal.h>
 #include <fcntl.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 #define max 10
 #define dim 15
@@ -53,13 +63,13 @@ int main(){
     pid = fork();
     
     if (pid == 0){
-
         ppid = getppid();
         signal(SIGUSR1,OK_to_send);
         signal(SIGUSR2,fine);
 
         for(;;){
-            sprintf(buff, "Ciao papa :( %2d\n",count++);
+            sprintf(buff, "Ciao papa%2d\n",count++);
+            send(buff);
         }
     }else if (pid > 0){
         for (i=0; i<max;i++){
@@ -97,7 +107,7 @@ void ricevuto(int signum) {
 }
 
 void OK_to_send(int signum){
-    char buff[25] = "..fube receive\n";
+    char buff[25] = "..receive\n";
     write(1,buff,strlen(buff));
 }
 void fine(int signum){
