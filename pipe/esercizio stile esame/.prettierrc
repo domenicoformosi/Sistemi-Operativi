@@ -1,0 +1,13 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": ["*.c", "*.h"],
+      "options": {
+        "parser": "c"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-c"]
+}
