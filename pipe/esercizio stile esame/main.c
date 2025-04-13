@@ -63,11 +63,11 @@ int main(int argc, char **argv)
         for (tot = 0, i = 0; i < N; i++)
         {
             read(pipefd[0], &K, sizeof(int)); // lettura binaria
-            tot += K;
-        }
-        close(pipefd[0]);
-        printf("\n valore ottenuto: %d\n", tot);
-        for (i = 0; i < N; i++)
+                    tot += K;
+                }
+                close(pipefd[0]);
+                printf("\n valore ottenuto: %d\n", tot);
+                for (i = 0; i < N; i++)
         {
             p = wait(&stato);
             if (WIFEXITED(stato))
@@ -99,4 +99,5 @@ void figlio(int ind, char c, int fra, char filein[])
     close(pipefd[1]);
     close(fd);
     exit(0);
+    
 }
