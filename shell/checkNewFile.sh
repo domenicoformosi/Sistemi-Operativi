@@ -27,5 +27,5 @@ do
     OK=`expr $OK + 1` #incremento il mio contatore
     sleep 5s #nanna 5 secondi
 done
-rm /"$1"/*
+rm /"$1"/* #pericolossisima da fixare (mi ha cancellato tutto)
 rm loop.$$.tmp
