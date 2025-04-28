@@ -32,3 +32,4 @@ fi
 if [ $dimFile1 -ge $dimFile2 ]
     then  echo Il file $absPath1 ha dimensione maggiore (uguale), pari a `$dimFile1/1000` Kb;
 fi
+echo ciaooo
