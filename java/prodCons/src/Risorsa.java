@@ -35,4 +35,9 @@ sP.release();
 }catch(InterruptedException e){}
 return messaggio;
 }
+public static void main(String[] args) {
+    Risorsa risorsa = new Risorsa();
+    System.out.println("Test della Risorsa");
+    // Aggiungi qui il codice per testare i metodi inserimento e prelievo
+}
 }
