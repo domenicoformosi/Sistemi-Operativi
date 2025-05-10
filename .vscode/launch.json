@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Mercato",
+            "request": "launch",
+            "mainClass": "Mercato",
+            "projectName": "Sistemi-Operativi_3639f7d7"
+        },
+        {
+            "type": "java",
             "name": "Risorsa",
             "request": "launch",
             "mainClass": "Risorsa",
