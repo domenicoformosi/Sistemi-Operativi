@@ -1,0 +1,6 @@
+dobbiamo fare un programma che prende nome assoluto di un file, stringa e numero > 0
+
+p1 deve contare numero di linee di file che contengono la stringa, p0 deve ricevera questa info e controllare se è divisibile per m, se si,
+avvisa p2 che deve stampare l'esito 
+
+numero
