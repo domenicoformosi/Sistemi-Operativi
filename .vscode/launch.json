@@ -9,6 +9,13 @@
             "name": "Mercato",
             "request": "launch",
             "mainClass": "Mercato",
+            "projectName": "Sistemi-Operativi_19c05e47"
+        },
+        {
+            "type": "java",
+            "name": "Mercato",
+            "request": "launch",
+            "mainClass": "Mercato",
             "projectName": "Sistemi-Operativi_3639f7d7"
         },
         {
