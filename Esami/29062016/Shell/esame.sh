@@ -21,7 +21,7 @@ if [[ "$0" = /* ]] ; then
 elif [[ "$0" = */* ]] ; then
     dirName=`dirname "$0"`
     echo $dirName
-    recursiveScript="$PWD/$dirName/recursive.sh"
+    recursiveScript="`pwd`/$dirName/recursive.sh"
     echo a
 else 
     recursiveScript="recursive.sh"
@@ -31,8 +31,8 @@ echo $recursiveScript
 # in dirout, mi conviene generare path assoluto anche di dirout (sempre assumendo stia in questo folder)
 
 # problema sopra risolto usando realpath, lo lascio perche si
-
-"recursiveScript" "$dirin" "$2" "$3" "$dirout"
+> "$4/all.out"
+"$recursiveScript" "$dirin" "$2" "$3" "$dirout"
 
 # note finali: la struttura della soluzione è simile alla soluzione
 # mi fa molto piacere (sono ironico) che nella soluzione non si sono fatti pare per path assoluti/relativ di dirin e dirout
