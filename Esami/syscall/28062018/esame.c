@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+
 void checkInteger(int);
 void avvisa(int);
 void muori(int);
