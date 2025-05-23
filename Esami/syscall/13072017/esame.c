@@ -140,7 +140,5 @@ void waitMySonsDeath()
         printf("Terminazione volontaria di %d con stato %d\n", pid, WEXITSTATUS(status));
     else if (WIFSIGNALED(status))
         printf("Terminazione involontaria per segnale %d\n", WTERMSIG(status));
-
-    
 }
 
