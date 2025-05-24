@@ -45,6 +45,7 @@ int main(int argc, char* argv[])
 		perror("Errore pipe: ");
 		exit(EXIT_FAILURE);
 	}
+	signal(SIGCHLD,waitTillTheyDie);
 	signal(SIGUSR1,stampa);
 	signal(SIGALRM,termina);
 
@@ -125,7 +126,8 @@ int main(int argc, char* argv[])
 	}
 
 	if (pid[0]>0 && pid[1]>0)
-	{
+	{	
+		
 		close(pipefd[0]);
 		close(pipefd[1]);
 		alarm(t);
